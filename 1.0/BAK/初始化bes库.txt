@@ -1,0 +1,7 @@
+drop database bes;
+create database bes;
+use bes;
+create table BorrowBooksList(id int auto_increment primary key not null,a_education_id int(200) not null,b_education_id int(200) not null,a_borrowbook_one varchar(200),a_borrowbook_two varchar(200),a_borrowbook_three varchar(200),b_borrowbook_one varchar(200),b_borrowbook_two varchar(200),b_borrowbook_three varchar(200),a_PhoneNumber bigint(20) not null,b_PhoneNumber bigint(20) not null,create_date date not null,ok_date date not null)character set utf8;
+create table uesrs(uesr_id int auto_increment primary key not null,uesr_education_id int(200) not null,uesr_password_md5 varchar(100) not null,uesr_create_date date not null);
+create table NBorrowBooksList(id int auto_increment primary key not null,education_id int(200) not null,borrowbook_one varchar(200),borrowbook_two varchar(200),borrowbook_three varchar(200),PhoneNumber int(254) not null,create_date date not null)character set utf8;
+create table errors(error_id int auto_increment primary key not null,error_information varchar(200) not null);
